@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>My Tech Shop</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>About Us</h1>
+    <h2 th:text="${message}"></h2>
+    <p>At My Tech Shop, we are determined to help customers build the personal computer they desire. Choosing from a selection of different product form factors
+        as your base, you can then combine these pre-built PCs with parts you want, such as a high-end GPU or expanded storage. This will allow you, the customer
+    to purchase a PC that can fulfill any role, whether your purpose be video processing, database creation, or personal recreation.</p>
+    <a href="/mainscreen" class="btn btn-primary">Back to Main Screen</a>
+</div>
+</body>
+</html>

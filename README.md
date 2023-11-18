@@ -4,9 +4,13 @@
 C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
 
-Updated lines 14, 19, 21, 53 in mainscreen.html to reflect my choice for the shop and the products and parts it will contain.
+mainscreen.html - Updated lines 14, 19, 21, 53 in  to reflect my choice for the shop and the products and parts it will contain.
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+
+about.html - Created this file and filled out, added button back to main screen on line 24
+AboutController.java - Created this file 
+mainscreen.html - Added button to about page on line 21
 
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
