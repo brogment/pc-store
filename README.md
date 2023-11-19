@@ -21,6 +21,11 @@ BootStrapData.java - Created the 5 products and 5 parts on lines 70-91, also add
 •  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 •  Display a message that indicates the success or failure of a purchase.
 
+BuyProductController.java - Created file, lines 18-33 decrement the inventory if possible, and send a GET request to the appropriate method on lines 35-46.
+purchasesuccess.html - Created file, the "view" that is shown upon a successful purchase.
+purchaseerror.html - Created file, the "view" that is shown if inventory at zero.
+BootStrapData.java - Lines 70-90, corrected to use constructors that include ID parameter.
+OutSourcedPart.java - Lines 20, 21 corrected to reflect superclass constructor that include ID parameter.
 
 **G.  Modify the parts to track maximum and minimum inventory by doing the following:**
 •  Add additional fields to the part entity for maximum and minimum inventory.

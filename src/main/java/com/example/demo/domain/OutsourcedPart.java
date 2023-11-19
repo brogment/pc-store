@@ -17,8 +17,8 @@ String companyName;
     public OutsourcedPart() {
     }
 
-    public OutsourcedPart(String name, double price, int inv, String companyName) {
-      super(name, price, inv);
+    public OutsourcedPart(long id, String name, double price, int inv, String companyName) {
+      super(id, name, price, inv);
       this.companyName = companyName;
     }
 

@@ -67,22 +67,22 @@ public class BootStrapData implements CommandLineRunner {
 
         if (productRepository.count() == 0 && outsourcedPartRepository.count() == 0) {
 
-            OutsourcedPart newGPU = new OutsourcedPart("7900 XT", 800.0, 4, "AMD");
-            OutsourcedPart oldGPU = new OutsourcedPart("GTX 1660", 150.0, 8, "NVIDIA");
-            OutsourcedPart ddr4 = new OutsourcedPart("8GB Ram", 50.0, 10, "Corsair");
-            OutsourcedPart storage = new OutsourcedPart("2TB SSD", 200.0, 6, "Samsung");
-            OutsourcedPart soundCard = new OutsourcedPart("Sound Blaster", 139.0, 5, "Creative Labs");
+            OutsourcedPart newGPU = new OutsourcedPart(20L, "7900 XT", 800.0, 4, "AMD");
+            OutsourcedPart oldGPU = new OutsourcedPart(21L, "GTX 1660", 150.0, 8, "NVIDIA");
+            OutsourcedPart ddr4 = new OutsourcedPart(22L, "8GB Ram", 50.0, 10, "Corsair");
+            OutsourcedPart storage = new OutsourcedPart(23L, "2TB SSD", 200.0, 6, "Samsung");
+            OutsourcedPart soundCard = new OutsourcedPart(24L, "Sound Blaster", 139.0, 5, "Creative Labs");
             outsourcedPartRepository.save(newGPU);
             outsourcedPartRepository.save(oldGPU);
             outsourcedPartRepository.save(ddr4);
             outsourcedPartRepository.save(storage);
             outsourcedPartRepository.save(soundCard);
 
-            Product gamingPC= new Product("Gaming PC",3500.0,5);
-            Product officePC= new Product("Office PC",500.0,7);
-            Product highEndLaptop = new Product("Alienware Laptop",1600.0,4);
-            Product budgetLaptop = new Product("Thinkpad Laptop",200.0,10);
-            Product videoWorkstation= new Product("Video Editing PC",5000.0,2);
+            Product gamingPC= new Product(100L, "Gaming PC",3500.0,5);
+            Product officePC= new Product(101L, "Office PC",500.0,7);
+            Product highEndLaptop = new Product(102L, "Alienware Laptop",1600.0,4);
+            Product budgetLaptop = new Product(103L, "Thinkpad Laptop",200.0,10);
+            Product videoWorkstation= new Product(104L, "Video Editing PC",5000.0,2);
             productRepository.save(gamingPC);
             productRepository.save(officePC);
             productRepository.save(highEndLaptop);
