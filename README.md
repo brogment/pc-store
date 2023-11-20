@@ -50,6 +50,9 @@ mainscreen.html - lines 40,41 and 50,51 added table cells for max and min
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
+AddOutsourcedPartController.java - lines 46-55 display error message if inventory becomes less than min or greater than max num when adding or updating parts
+AddInhousePartController.java - lines 46-55 display error message if inventory becomes less than min or greater than max when adding or updating parts
+EnufPartsValidator.java - lines 39-54 display error message if adding products would lower the inventory of an associated part below its minimum
 
 **I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.**
 

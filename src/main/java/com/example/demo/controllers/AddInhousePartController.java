@@ -43,6 +43,16 @@ public class AddInhousePartController{
             return "InhousePartForm";
         }
 
+        if(part.getInv() < part.getMinInv()) {
+            theBindingResult.rejectValue("inv", null, "Inventory cannot be below minimum requirement");
+            return "InhousePartForm";
+        }
+
+        if(part.getInv() > part.getMaxInv()) {
+            theBindingResult.rejectValue("inv", null, "Inventory cannot be above maximum requirement");
+            return "InhousePartForm";
+        }
+
         if (!part.isInvValid()) {
             theBindingResult.rejectValue("inv", null, "Inventory out of range.");
             return "InhousePartForm";
