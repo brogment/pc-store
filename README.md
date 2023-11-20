@@ -34,6 +34,16 @@ OutSourcedPart.java - Lines 20, 21 corrected to reflect superclass constructor t
 •  Rename the file the persistent storage is saved to.
 •  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
+application.properties - line 6 changed database file name
+Part.java - lines 31-34 created min and max attributes, line 92-98 created getter/setter methods for min/max, line 56 and 57 added to constructor, line 125-129 created method to check if inventory in range
+OutsourcedPartForm.html - lines 27-31 added min and max to form
+InhousePartForm.html - lines 26-30 added min and max to form
+InhousePart.java - lines 19-22 created constructor to create inhouse parts
+OutsourcedPart.java - lines 20 and 21 added min/max to constructor
+BootStrapData.java - lines 70-74 added min and max to sample inventory
+AddOutsourcedPartController.java - lines 47-50 added logic to stop and display an out of range error
+AddInhousePartController.java - line 46-49 added logic to stop and display an out of range error
+mainscreen.html - lines 40,41 and 50,51 added table cells for max and min
 
 **H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:**
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.

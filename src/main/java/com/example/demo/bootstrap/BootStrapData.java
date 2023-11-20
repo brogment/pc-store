@@ -67,11 +67,11 @@ public class BootStrapData implements CommandLineRunner {
 
         if (productRepository.count() == 0 && outsourcedPartRepository.count() == 0) {
 
-            OutsourcedPart newGPU = new OutsourcedPart(20L, "7900 XT", 800.0, 4, "AMD");
-            OutsourcedPart oldGPU = new OutsourcedPart(21L, "GTX 1660", 150.0, 8, "NVIDIA");
-            OutsourcedPart ddr4 = new OutsourcedPart(22L, "8GB Ram", 50.0, 10, "Corsair");
-            OutsourcedPart storage = new OutsourcedPart(23L, "2TB SSD", 200.0, 6, "Samsung");
-            OutsourcedPart soundCard = new OutsourcedPart(24L, "Sound Blaster", 139.0, 5, "Creative Labs");
+            OutsourcedPart newGPU = new OutsourcedPart("7900 XT", 800.0, 4, "AMD", 10, 0);
+            OutsourcedPart oldGPU = new OutsourcedPart("GTX 1660", 150.0, 8, "NVIDIA", 10, 0);
+            OutsourcedPart ddr4 = new OutsourcedPart("8GB Ram", 50.0, 10, "Corsair", 10, 0);
+            OutsourcedPart storage = new OutsourcedPart("2TB SSD", 200.0, 6, "Samsung", 10, 0);
+            OutsourcedPart soundCard = new OutsourcedPart("Sound Blaster", 139.0, 5, "Creative Labs", 10, 0);
             outsourcedPartRepository.save(newGPU);
             outsourcedPartRepository.save(oldGPU);
             outsourcedPartRepository.save(ddr4);

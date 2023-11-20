@@ -42,13 +42,19 @@ public class AddInhousePartController{
         if(theBindingResult.hasErrors()){
             return "InhousePartForm";
         }
-        else{
+
+        if (!part.isInvValid()) {
+            theBindingResult.rejectValue("inv", null, "Inventory out of range.");
+            return "InhousePartForm";
+        }
+
         InhousePartService repo=context.getBean(InhousePartServiceImpl.class);
         InhousePart ip=repo.findById((int)part.getId());
-        if(ip!=null)part.setProducts(ip.getProducts());
-            repo.save(part);
-
-        return "confirmationaddpart";}
+        if(ip!=null) {
+            part.setProducts(ip.getProducts());
+        }
+        repo.save(part);
+        return "confirmationaddpart";
     }
 
 }
