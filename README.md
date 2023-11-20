@@ -59,4 +59,4 @@ BootStrapData.java - Lines 70-90, adjusted max/min inv for parts, as well as par
 PartTest.java - lines 160-167 created test for minInv field, lines 169-176 created test for maxInv field
 
 **J.  Remove the class files for any unused validators in order to clean your code.**
-
+DeletePartValidator.java - deleted this file
