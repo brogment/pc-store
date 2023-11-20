@@ -55,7 +55,8 @@ AddInhousePartController.java - lines 46-55 display error message if inventory b
 EnufPartsValidator.java - lines 39-54 display error message if adding products would lower the inventory of an associated part below its minimum
 
 **I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.**
-
+BootStrapData.java - Lines 70-90, adjusted max/min inv for parts, as well as part and product inventories
+PartTest.java - lines 160-167 created test for minInv field, lines 169-176 created test for maxInv field
 
 **J.  Remove the class files for any unused validators in order to clean your code.**
 

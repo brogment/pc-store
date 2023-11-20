@@ -67,22 +67,22 @@ public class BootStrapData implements CommandLineRunner {
 
         if (productRepository.count() == 0 && outsourcedPartRepository.count() == 0) {
 
-            OutsourcedPart newGPU = new OutsourcedPart("7900 XT", 800.0, 4, "AMD", 10, 0);
-            OutsourcedPart oldGPU = new OutsourcedPart("GTX 1660", 150.0, 8, "NVIDIA", 10, 0);
-            OutsourcedPart ddr4 = new OutsourcedPart("8GB Ram", 50.0, 10, "Corsair", 10, 0);
-            OutsourcedPart storage = new OutsourcedPart("2TB SSD", 200.0, 6, "Samsung", 10, 0);
-            OutsourcedPart soundCard = new OutsourcedPart("Sound Blaster", 139.0, 5, "Creative Labs", 10, 0);
+            OutsourcedPart newGPU = new OutsourcedPart("7900 XT", 800.0, 20, "AMD", 100, 6);
+            OutsourcedPart oldGPU = new OutsourcedPart("GTX 1660", 150.0, 30, "NVIDIA", 50, 8);
+            OutsourcedPart ddr4 = new OutsourcedPart("8GB Ram", 50.0, 50, "Corsair", 200, 10);
+            OutsourcedPart storage = new OutsourcedPart("2TB SSD", 200.0, 18, "Samsung", 75, 6);
+            OutsourcedPart soundCard = new OutsourcedPart("Sound Blaster", 139.0, 16, "Creative Labs", 30, 8);
             outsourcedPartRepository.save(newGPU);
             outsourcedPartRepository.save(oldGPU);
             outsourcedPartRepository.save(ddr4);
             outsourcedPartRepository.save(storage);
             outsourcedPartRepository.save(soundCard);
 
-            Product gamingPC= new Product(100L, "Gaming PC",3500.0,5);
-            Product officePC= new Product(101L, "Office PC",500.0,7);
-            Product highEndLaptop = new Product(102L, "Alienware Laptop",1600.0,4);
-            Product budgetLaptop = new Product(103L, "Thinkpad Laptop",200.0,10);
-            Product videoWorkstation= new Product(104L, "Video Editing PC",5000.0,2);
+            Product gamingPC= new Product(100L, "Gaming PC",3500.0,15);
+            Product officePC= new Product(101L, "Office PC",500.0,30);
+            Product highEndLaptop = new Product(102L, "Alienware Laptop",1600.0,40);
+            Product budgetLaptop = new Product(103L, "Thinkpad Laptop",200.0,90);
+            Product videoWorkstation= new Product(104L, "Video Editing PC",5000.0,10);
             productRepository.save(gamingPC);
             productRepository.save(officePC);
             productRepository.save(highEndLaptop);
