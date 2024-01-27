@@ -17,12 +17,6 @@ import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- *
- *
- *
- */
 @Controller
 public class AddProductController {
     @Autowired
@@ -63,11 +57,7 @@ public class AddProductController {
             theModel.addAttribute("availparts",availParts);
             theModel.addAttribute("assparts",product2.getParts());
             return "productForm";
-        }
- //       theModel.addAttribute("assparts", assparts);
- //       this.product=product;
-//        product.getParts().addAll(assparts);
-        else {
+        } else {
             ProductService repo = context.getBean(ProductServiceImpl.class);
             if(product.getId()!=0) {
                 Product product2 = repo.findById((int) product.getId());
@@ -125,12 +115,9 @@ public class AddProductController {
     public AddProductController(PartService partService) {
         this.partService = partService;
     }
-// make the add and remove buttons work
 
     @GetMapping("/associatepart")
     public String associatePart(@Valid @RequestParam("partID") int theID, Model theModel){
-    //    theModel.addAttribute("product", product);
-    //    Product product1=new Product();
         if (product1.getName()==null) {
             return "saveproductscreen";
         }
@@ -148,12 +135,10 @@ public class AddProductController {
         }
         theModel.addAttribute("availparts",availParts);
         return "productForm";}
- //        return "confirmationassocpart";
     }
     @GetMapping("/removepart")
     public String removePart(@RequestParam("partID") int theID, Model theModel){
         theModel.addAttribute("product", product);
-      //  Product product1=new Product();
         product1.getParts().remove(partService.findById(theID));
         partService.findById(theID).getProducts().remove(product1);
         ProductService productService = context.getBean(ProductServiceImpl.class);

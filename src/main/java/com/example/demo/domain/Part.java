@@ -8,12 +8,6 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- *
- *
- *
- *
- */
 @Entity
 @ValidDeletePart
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -32,8 +26,6 @@ public abstract class Part implements Serializable {
     int minInv;
     @Min(value = 0, message = "Max value must be positive")
     int maxInv;
-
-
 
     @ManyToMany
     @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
